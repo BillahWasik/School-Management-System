@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using School_Management_System.Data;
+using School_Management_System.Repository;
+using School_Management_System.Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlSer
 
     builder.Configuration.GetConnectionString("DefaultConnection")
     )) ;
+
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
 var app = builder.Build();
 
