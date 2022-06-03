@@ -22,5 +22,12 @@ namespace School_Management_System.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Create(Employee obj)
+        {
+            db.Add(obj);
+            db.Save();
+            return RedirectToAction("Index");
+        }
     }
 }
