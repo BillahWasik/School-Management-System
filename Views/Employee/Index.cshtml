@@ -23,16 +23,22 @@
       <th scope="col">Name</th>
       <th scope="col">Salary</th>
       <th scope="col">Role</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     
       @foreach (var item in Model)
       {
+          <tr>
           <td>@item.id</td>
           <td>@item.name</td>
           <td>@item.salary</td>
           <td>@item.role</td>
+          <td>
+              <a asp-action="Edit" asp-controller="Employee" asp-route-id="@item.id">Edit</a>
+          </td>
+          </tr>
       }
 
   </tbody>

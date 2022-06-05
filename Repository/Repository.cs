@@ -5,6 +5,7 @@ using School_Management_System.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,6 +38,15 @@ namespace School_Management_System.Repository
         public void Remove(T item)
         {
             dbset.Remove(item);
+        }
+
+        public T Getfirstordefault(Expression<Func<T, bool>> filter)
+        {
+            IQueryable <T> data = dbset;
+
+            data=data.Where(filter);
+
+            return data.FirstOrDefault();
         }
     }
 }
