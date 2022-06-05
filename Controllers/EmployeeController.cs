@@ -63,6 +63,34 @@ namespace School_Management_System.Controllers
             return View(obj);
         }
 
+        [HttpGet]
+        public IActionResult Delete(int? Id)
+        {
+            if (Id == null || Id == 0)
+            {
+                return NotFound();
+            }
+            var edit = db.Getfirstordefault(u => u.id == Id);
+
+            if (edit == null)
+            {
+                return NotFound();
+            }
+
+            return View(edit);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Employee obj)
+        {
+            
+                db.Remove(obj);
+                db.Save();
+                return RedirectToAction("Index");
+            
+            return View(obj);
+        }
+
 
 
 
