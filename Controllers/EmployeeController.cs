@@ -6,15 +6,15 @@ namespace School_Management_System.Controllers
 {
     public class EmployeeController : Controller
     {
-        private readonly IEmployeeRepository db;
+        private readonly IunitOfWork db;
 
-        public EmployeeController(IEmployeeRepository _db)
+        public EmployeeController(IunitOfWork _db)
         {
             db = _db;
         }
         public IActionResult Index()
         {
-            IEnumerable<Employee> e = db.GetAll();
+            IEnumerable<Employee> e = db.Employee.GetAll();
 
             return View(e);
         }
@@ -27,7 +27,7 @@ namespace School_Management_System.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Add(obj);
+                db.Employee.Add(obj);
                 db.Save();
                 return RedirectToAction("Index");
             }
@@ -41,7 +41,7 @@ namespace School_Management_System.Controllers
             {
                 return NotFound();
             }
-            var edit = db.Getfirstordefault(u=>u.id==Id);
+            var edit = db.Employee.Getfirstordefault(u=>u.id==Id);
 
             if (edit==null)
             {
@@ -56,7 +56,7 @@ namespace School_Management_System.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Update(obj);
+                db.Employee.Update(obj);
                 db.Save();
                 return RedirectToAction("Index");
             }
@@ -70,7 +70,7 @@ namespace School_Management_System.Controllers
             {
                 return NotFound();
             }
-            var edit = db.Getfirstordefault(u => u.id == Id);
+            var edit = db.Employee.Getfirstordefault(u => u.id == Id);
 
             if (edit == null)
             {
@@ -84,7 +84,7 @@ namespace School_Management_System.Controllers
         public IActionResult Delete(Employee obj)
         {
             
-                db.Remove(obj);
+                db.Employee.Remove(obj);
                 db.Save();
                 return RedirectToAction("Index");
             
