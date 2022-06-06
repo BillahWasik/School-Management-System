@@ -12,11 +12,6 @@ namespace School_Management_System.Repository
             _db = db;
         }
 
-        public void Save()
-        {
-           _db.SaveChanges();
-        }
-
         public void Update(Employee obj)
         {
            _db.employees.Update(obj);

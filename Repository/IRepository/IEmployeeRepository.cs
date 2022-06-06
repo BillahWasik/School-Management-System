@@ -7,7 +7,5 @@ namespace School_Management_System.Repository.IRepository
     {
 
         void Update(Employee obj);
-
-        void Save();
     }
 }
