@@ -1,0 +1,31 @@
+﻿@model Teacher
+
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Update Teacher</h2>
+            <hr />
+            <div asp-validation-summary="All"></div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="name"></label>
+            <input asp-for="name" class="form-control" />
+            <span asp-validation-for="name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="salary"></label>
+            <input asp-for="salary" class="form-control" />
+            <span asp-validation-for="salary" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="designation"></label>
+            <input asp-for="designation" class="form-control" />
+            <span asp-validation-for="designation" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary " style="width:150px">Update</button>
+        <a asp-controller="Teacher" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to List</a>
+    </div>
+
+</form>
+

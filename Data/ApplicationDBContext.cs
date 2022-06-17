@@ -13,5 +13,7 @@ namespace School_Management_System.Data
         public DbSet<Employee> employees { get; set; }
 
         public DbSet<Teacher> teachers { get; set; }
+
+        public DbSet<Student> students { get; set; }
     }
 }
