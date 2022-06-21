@@ -22,4 +22,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\School_Management_System.DataAccessLayer\School_Management_System.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\School_Management_System.Models\School_Management_System.Models.csproj" />
+  </ItemGroup>
+
 </Project>

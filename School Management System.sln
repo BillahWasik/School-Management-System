@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School Management System", "School Management System.csproj", "{9F3D13F3-6C82-4D67-ADFF-DFABAA3487D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School Management System", "School Management System.csproj", "{9F3D13F3-6C82-4D67-ADFF-DFABAA3487D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School_Management_System.Models", "..\School_Management_System.Models\School_Management_System.Models.csproj", "{B028FD7A-B8EE-4E89-85EE-02D0389965B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School_Management_System.DataAccessLayer", "..\School_Management_System.DataAccessLayer\School_Management_System.DataAccessLayer.csproj", "{1D9F0D20-B239-4420-84B2-268DD9A076EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B1970224-F8B4-4354-8EEC-7F6A7889CEF1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +24,14 @@ Global
 		{9F3D13F3-6C82-4D67-ADFF-DFABAA3487D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F3D13F3-6C82-4D67-ADFF-DFABAA3487D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F3D13F3-6C82-4D67-ADFF-DFABAA3487D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B028FD7A-B8EE-4E89-85EE-02D0389965B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B028FD7A-B8EE-4E89-85EE-02D0389965B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B028FD7A-B8EE-4E89-85EE-02D0389965B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B028FD7A-B8EE-4E89-85EE-02D0389965B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D9F0D20-B239-4420-84B2-268DD9A076EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D9F0D20-B239-4420-84B2-268DD9A076EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D9F0D20-B239-4420-84B2-268DD9A076EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D9F0D20-B239-4420-84B2-268DD9A076EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
